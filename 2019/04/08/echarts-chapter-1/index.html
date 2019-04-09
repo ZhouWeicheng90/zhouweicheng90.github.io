@@ -5,18 +5,18 @@
   
 
   
-  <title>echarts课堂（1） | 博客</title>
+  <title>echarts--入门（一） | 博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前端时间做了一个数据监控的项目，里面有很多数据可视化的需求，数据可视化我一直都很感兴趣，但是没有机会实践，所以项目完成后就好好总结一下。 饼图饼图应该是最常见的图了，配置饼图时有个很重要的属性roseType，设置饼图是否以玫瑰图（南丁格尔图）的方式显示。玫瑰图就是另一种饼图，会将数据的比例夸大。roseType：radius/area 可以理解为3次方夸大和2次方夸大。并不是所有场景都可以使">
 <meta property="og:type" content="article">
-<meta property="og:title" content="echarts课堂（1）">
+<meta property="og:title" content="echarts--入门（一）">
 <meta property="og:url" content="http://yoursite.com/2019/04/08/echarts-chapter-1/index.html">
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="前端时间做了一个数据监控的项目，里面有很多数据可视化的需求，数据可视化我一直都很感兴趣，但是没有机会实践，所以项目完成后就好好总结一下。 饼图饼图应该是最常见的图了，配置饼图时有个很重要的属性roseType，设置饼图是否以玫瑰图（南丁格尔图）的方式显示。玫瑰图就是另一种饼图，会将数据的比例夸大。roseType：radius/area 可以理解为3次方夸大和2次方夸大。并不是所有场景都可以使">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-08T09:23:38.097Z">
+<meta property="og:updated_time" content="2019-04-09T03:07:05.458Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="echarts课堂（1）">
+<meta name="twitter:title" content="echarts--入门（一）">
 <meta name="twitter:description" content="前端时间做了一个数据监控的项目，里面有很多数据可视化的需求，数据可视化我一直都很感兴趣，但是没有机会实践，所以项目完成后就好好总结一下。 饼图饼图应该是最常见的图了，配置饼图时有个很重要的属性roseType，设置饼图是否以玫瑰图（南丁格尔图）的方式显示。玫瑰图就是另一种饼图，会将数据的比例夸大。roseType：radius/area 可以理解为3次方夸大和2次方夸大。并不是所有场景都可以使">
   
     <link rel="alternate" href="/atom.xml" title="博客" type="application/atom+xml">
@@ -82,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      echarts课堂（1）
+      echarts--入门（一）
     </h1>
   
 
@@ -317,13 +317,13 @@
 </script>
 传入数据格式：
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">data:[ // 多个树形数据，(图中越靠内圈，数据层级越高。)</span><br><span class="line">    &#123;</span><br><span class="line">        name:&apos;类目一&apos;,</span><br><span class="line">        // 没有value时，默认为所有children的value之和</span><br><span class="line">        children:[ ... ], </span><br><span class="line">        // 其他配置</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name:&apos;类目二&apos;,</span><br><span class="line">        value:50，</span><br><span class="line">        children:[&#123;</span><br><span class="line">            name:&apos;b1&apos;</span><br><span class="line">            value:8  // 里面的value之和，一般不大于上面的50，</span><br><span class="line">            // 如果children的value之和大于父的value，虽不会报错，但图上已体现不出多余的！</span><br><span class="line">        &#125;]       </span><br><span class="line">        // ...</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">data:[ // 多个树形数据，(图中越靠内圈，数据层级越高。)</span><br><span class="line">    &#123;</span><br><span class="line">        name:&apos;类目一&apos;,</span><br><span class="line">        // 没有value时，默认为所有children的value之和</span><br><span class="line">        children:[ ... ], </span><br><span class="line">        // 其他配置</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name:&apos;类目二&apos;,</span><br><span class="line">        value:50，</span><br><span class="line">        children:[&#123;</span><br><span class="line">            name:&apos;b1&apos;</span><br><span class="line">            value:8  // children里面的value之和，一般不大于上面的50，</span><br><span class="line">            // 如果大于，虽不会报错，但图上已体现不出超出的部分！</span><br><span class="line">        &#125;]       </span><br><span class="line">        // ...</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 
 旭日图的样式：
 
 可以整个图添加样式（series中），可以按层添加样式（ series的levels中），可以单个节点添加样式（series的data中），很遗憾目前没有按树添加样式的，这样的需求只能一个个设置data了。
 
-<h1>直角坐标和极坐标下的折线图，柱状图，散点图</h1>
+# <h1>直角坐标和极坐标下的折线图，柱状图，散点图</h1>
 
 2种坐标系看似差别很大，其实本质是一样的。
 
@@ -407,11 +407,11 @@
 <li>使用极坐标系除了将 xAxis和yAxis 换成 angleAxis和radiusAxis外，还要在每个series里添加 <code>coordinateSystem:&#39;polar&#39;</code>，外层添加属性<code>polar:{}</code> 。直角坐标系grid 默认就是，所以不必要！</li>
 <li>axis 的type 两种坐标系与直角坐标系 完全一样。</li>
 </ol>
-<h1 id="地图"><a href="#地图" class="headerlink" title="地图"></a>地图</h1><p>地图是很常见的运用，其实地图有两种，一个是地图数据（即series的type为map）</p>
-<script src="https://api.map.baidu.com/getscript?v=2.0&ak=GlKmBT6AlelQnR0QIT7rIAAfqzDp3UfU&services=&t=20190123111209"></script>
+<h1 id="地图"><a href="#地图" class="headerlink" title="地图"></a>地图</h1><p>地图是很常见的运用，地图有两种，一个是地图数据（即series的type为map），通常用于展示区域性的信息，如总人口，降水量，颜色+深浅来表示数据大小等。另一种是地图作为“坐标”，在地图上绘制散点图，线图等。</p>
+<h3 id="创建百度地图“坐标系”，并在上面绘制一个散点："><a href="#创建百度地图“坐标系”，并在上面绘制一个散点：" class="headerlink" title="创建百度地图“坐标系”，并在上面绘制一个散点："></a>创建百度地图“坐标系”，并在上面绘制一个散点：</h3><script src="https://api.map.baidu.com/getscript?v=2.0&ak=GlKmBT6AlelQnR0QIT7rIAAfqzDp3UfU&services=&t=20190123111209"></script>
 <script src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
-<div style="height:608px;overflow: hidden;">
-    <div id="bmap-container" style="height: 670px;"></div>
+<div style="height:400px;overflow: hidden;">
+    <div id="bmap-container" style="height: calc(100% + 62px);"></div>
 </div>
 <script>
         (function(){
@@ -444,29 +444,286 @@
 
 
 
+<p>源码片段：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 引入百度地图服务： --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://api.map.baidu.com/getscript?v=2.0&amp;ak=GlKmBT6AlelQnR0QIT7rIAAfqzDp3UfU&amp;services=&amp;t=20190123111209"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 引入echarts插件，将百度地图封装成echarts可以用的bmap坐标系： --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bmap: &#123;                </span><br><span class="line">   center:[<span class="number">102.108752</span>, <span class="number">31.08716</span>]</span><br><span class="line">&#125;,</span><br><span class="line">series: [&#123;</span><br><span class="line">    type:<span class="string">'effectScatter'</span>,</span><br><span class="line">    coordinateSystem: <span class="string">'bmap'</span>,</span><br><span class="line">    data:[&#123;<span class="attr">name</span>:<span class="string">"四川的某个地方"</span>,<span class="attr">value</span>:[<span class="number">102.108752</span>, <span class="number">31.08716</span>]&#125;],</span><br></pre></td></tr></table></figure>
+<p>使用百度地图作为坐标系，bmap而非geo（对应的coordinateSystem，也为bmap），这个是比较特殊的，其他的都一样。</p>
+<h3 id="geoJson"><a href="#geoJson" class="headerlink" title="geoJson"></a><a href="https://www.jianshu.com/p/852d7ad081b3" target="_blank" rel="noopener">geoJson</a></h3><p>大多数情况下，我们都用geo来定义地图，下面是一段简单的geo</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"type"</span>: <span class="string">"FeatureCollection"</span>,</span><br><span class="line">    <span class="string">"features"</span>: [&#123;</span><br><span class="line">        <span class="string">"type"</span>: <span class="string">"Feature"</span>,</span><br><span class="line">        <span class="string">"id"</span>: <span class="string">"310230"</span>,</span><br><span class="line">        <span class="string">"properties"</span>: &#123;</span><br><span class="line">            <span class="string">"name"</span>: <span class="string">"测试地图"</span>,</span><br><span class="line">            <span class="string">"cp"</span>: [<span class="number">999.5637</span>, <span class="number">366.5383</span>],</span><br><span class="line">            <span class="string">"childNum"</span>: <span class="number">1</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">"geometry"</span>: &#123;</span><br><span class="line">            <span class="string">"type"</span>: <span class="string">"Polygon"</span>,</span><br><span class="line">            <span class="string">"coordinates"</span>: [points_arr]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中points_arr如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> points_arr = [</span><br><span class="line">        [</span><br><span class="line">            <span class="number">999.9798</span>,</span><br><span class="line">            <span class="number">366.3522</span></span><br><span class="line">        ],</span><br><span class="line">        [</span><br><span class="line">            <span class="number">999.9537</span>,</span><br><span class="line">            <span class="number">366.219</span></span><br><span class="line">        ],</span><br><span class="line">        ... ...</span><br></pre></td></tr></table></figure>
+<p>这里定义了一个地图（其实就是多边形啦），注意看geojson.features[i].geometry属性，里面<code>type:&quot;Polygon&quot;</code>表示是多边形。coordinates里面的每一个元素，都是一个多边形（即 [点1，点2] 这样的数组啦）(可以同时定义很多多边形哦，这个很好理解，如多岛国就是多个多边形)</p>
+<p><strong>geo里的点：</strong><code>[0.5637,0.5383]</code>，前面表示经度，后面表示维度，经度越大越向东（右），维度越大越向北（上）。</p>
+<h3 id="geo地图上绘制一条线"><a href="#geo地图上绘制一条线" class="headerlink" title="geo地图上绘制一条线"></a>geo地图上绘制一条线</h3><p><div id="geo-test" style="height: 400px;"></div></p>
+<script>
+(function(){
+    let points_arr = [
+        [
+            999.9798,
+            366.3522
+        ],
+        [
+            999.9537,
+            366.219
+        ],
+        [
+            999.9276,
+            366.1586
+        ],
+        [
+            999.9235,
+            366.1668
+        ],
+        [
+            999.918,
+            366.1771
+        ],
+        [
+            999.8631,
+            366.2472
+        ],
+        [
+            999.6104,
+            366.3859
+        ],
+        [
+            999.5816,
+            366.3996
+        ],
+        [
+            999.5569,
+            366.4044
+        ],
+        [
+            999.5349,
+            366.4024
+        ],
+        [
+            999.5211,
+            366.3907
+        ],
+        [
+            999.5349,
+            366.4168
+        ],
+        [
+            999.5678,
+            366.4779
+        ],
+        [
+            999.4951,
+            366.4985
+        ],
+        [
+            999.4209,
+            366.5218
+        ],
+        [
+            999.3866,
+            366.5445
+        ],
+        [
+            999.322,
+            366.5829
+        ],
+        [
+            999.2657,
+            366.6461
+        ],
+        [
+            999.2273,
+            366.6756
+        ],
+        [
+            999.1201,
+            366.7471
+        ],
+        [
+            999.1009,
+            366.7628
+        ],
+        [
+            999.1572,
+            366.7965
+        ],
+        [
+            999.2039,
+            366.8308
+        ],
+        [
+            999.2259,
+            366.8432
+        ],
+        [
+            999.2547,
+            366.8555
+        ],
+        [
+            999.2849,
+            366.8665
+        ],
+        [
+            999.3138,
+            366.8672
+        ],
+        [
+            999.3289,
+            366.8624
+        ],
+        [
+            999.3522,
+            366.8521
+        ],
+        [
+            999.3687,
+            366.8411
+        ],
+        [
+            999.403,
+            366.8116
+        ],
+        [
+            999.4195,
+            366.7862
+        ],
+        [
+            999.4333,
+            366.7704
+        ],
+        [
+            999.447,
+            366.7622
+        ],
+        [
+            999.4731,
+            366.7532
+        ],
+        [
+            999.5129,
+            366.7477
+        ],
+        [
+            999.5651,
+            366.7223
+        ],
+        [
+            999.5994,
+            366.7155
+        ],
+        [
+            999.7285,
+            366.6667
+        ],
+        [
+            999.7368,
+            366.6653
+        ],
+        [
+            999.756,
+            366.6564
+        ],
+        [
+            999.8672,
+            366.6193
+        ],
+        [
+            999.8892,
+            366.6187
+        ],
+        [
+            999.9043,
+            366.6152
+        ],
+        [
+            999.9991,
+            366.6138
+        ],
+        [
+            999.9991,
+            366.5019
+        ],
+        [
+            999.9881,
+            366.3934
+        ],
+        [
+            999.9798,
+            366.3522
+        ]
+    ];
+    let simple_geo = {
+        "type": "FeatureCollection",
+        "features": [{
+            "type": "Feature",
+            "id": "310230",
+            "properties": {
+                "name": "测试地图",
+                "cp": [
+                    999.5637,
+                    366.5383
+                ],
+                "childNum": 1
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    points_arr
+                ]
+            }
+        }, ]
+    };
+    let simple_scatter = [{
+        "name": "位置",
+        "value": [999.65597, 366.500000]
+    }]
+    echarts.registerMap('simple', simple_geo)
+    var myChart = echarts.init(document.getElementById("geo-test"));
+    let option = {
+        geo: [{
+            map: 'simple',
+        }],
+        series: [{
+            type: 'lines',
+            coordinateSystem: 'geo',
+            data: [{
+                name: 'abc',
+                coords: [
+                    [999.35597, 366.700000],
+                    [999.75597, 366.550000]
+                ]
+            }],
+            lineStyle: {
+                curveness: .2,
+                color: 'blue',
+                width: 2
+            },
+            effect: {
+                show: true,
+                symbol: 'arrow',
+                symbolSize: 9
+            },
+            symbol: ['diamond', 'circle']
+        }]
+    };
+    myChart.setOption(option, true);
+})()
+</script>
 
-
+<p>源码片段：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echarts.registerMap(<span class="string">'simple'</span>, simple_geo)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">geo: [&#123;</span><br><span class="line">    map: <span class="string">'simple'</span>,</span><br><span class="line">&#125;],</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">series: [&#123;</span><br><span class="line">    type: <span class="string">'lines'</span>,</span><br><span class="line">    coordinateSystem: <span class="string">'geo'</span>,</span><br><span class="line">    data: [&#123;</span><br><span class="line">        name: <span class="string">'abc'</span>,</span><br><span class="line">        coords: [</span><br><span class="line">            [<span class="number">999.35597</span>, <span class="number">366.700000</span>],</span><br><span class="line">            [<span class="number">999.75597</span>, <span class="number">366.550000</span>]</span><br><span class="line">        ]</span><br><span class="line">    &#125;],</span><br><span class="line">    lineStyle: &#123;</span><br><span class="line">        curveness: <span class="number">.2</span>,</span><br><span class="line">        color: <span class="string">'blue'</span>,</span><br><span class="line">        width: <span class="number">2</span></span><br><span class="line">    &#125;,</span><br><span class="line">    effect: &#123;</span><br><span class="line">        show: <span class="literal">true</span>,</span><br><span class="line">        symbol: <span class="string">'arrow'</span>,</span><br><span class="line">        symbolSize: <span class="number">9</span></span><br><span class="line">    &#125;,</span><br><span class="line">    symbol: [<span class="string">'diamond'</span>, <span class="string">'circle'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/08/echarts-chapter-1/" data-id="cju85gkj300019wvlterdj4lq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/08/echarts-chapter-1/" data-id="cju97kzxh00009cvlww2d9njm" class="article-share-link">Share</a>
       
       
     </footer>
   </div>
   
     
-<nav id="article-nav">
-  
-  
-    <a href="/2019/04/04/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
   
 </article>
 
@@ -499,11 +756,7 @@
       <ul>
         
           <li>
-            <a href="/2019/04/08/echarts-chapter-1/">echarts课堂（1）</a>
-          </li>
-        
-          <li>
-            <a href="/2019/04/04/hello-world/">Hello World</a>
+            <a href="/2019/04/08/echarts-chapter-1/">echarts--入门（一）</a>
           </li>
         
       </ul>
